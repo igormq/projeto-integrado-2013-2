@@ -1,0 +1,39 @@
+\section{Oscilador LC MOS cruzado acoplado}
+Neste tipo de oscilador, os transistores estão em classe A, fornecendo energia ao tanque LC, que consome devido a sua não idealidade. Neste caso, a energia que o transistor injeta no tanque, deve ser maior ou igual que a resistência de perda total do circuito. O fator de qualidade deste circuito é:
+\begin{equation}
+Q = \frac{2\pi*f*L}{R_p}
+\end{equation}
+E o g_m é:
+\begin{equation}
+g_m = \frac{i_D}{V_{GS} - V_t}
+\end{equation}
+Para que ocorra uma oscilação:
+\begin{equation}
+\frac{1}{g_m} \geq \frac{2\pi*f*L}{Q}
+\end{equation}
+É importante notar que, mesmo que o circuito seja instável e os transistores entrem em corte e saturação, a tesnão na saída continuará próxima de uma senoide perfeita quanto maior for o fator de qualidade do tanque.
+Uma das grandes desvantagens desse circuito deve-se ao fato de que são poucos os MOSFETs que sustentam uma tensão de gate maior que 20V, limitando assim a potência do circuito.
+
+
+\section{Oscilador Royer}
+Em 1954, George Royer patenteou o oscilador Royer, um circuito auto ressonante, simples e com pouco uso de componentes. Como a maioria dos osciladores, ele utiliza um tanque LC para a oscilação. A grande vantagem deste circuito deve-se ao fato do terceiro enrolamento estar conectado à base dos transistores. Isto garante que um transistor estará cortado enquanto o outro estiver ativo, diminuindo bastante o consumo energético do circuito.
+
+
+\section{Oscilador Mazzilli}
+O oscilador Mazzilli é uma derivação do oscilador Royer com o LC MOS. A grande diferença neste circuito está no circuito presente no gate, para assegurar o baixo consumo energético e o chaveamento em ZVS sem ter que utilizar um terceiro enrolamento no indutor. Mazzilli usa uma combinação, retirando energia de Vin (como no Royer) e no entanto ligando os gates por um diodo ao dreno oposto. Com isso, suprimos o problema de tensão que existia no LC MOS e continuamos a utilizasr MOSFET ao invés de BJT, podendo assim, garantir alta frequência na oscilação.
+
+\subsection{Modos de Operação}
+Esse conversão possui quatro modos de operação. O primeiro dele consiste no dreno das duas chaves aterrados. Como eles estão ligados cruzado, isto garante que a chave 1 está cortada e a 2 ativa. Durante esta operação o capacitor é completamente descarregado. Depois disso a chave 1 é cortada e é a vez da chave 2 está ativa. Assim há a geração de uma corrente que irá percorrer o tanque LC e irá descarregar na chave ativa. Quando a voltagem no dreno 1 retorna para zero, ocorre o chaveamento das duas chaves. Assim como no modo de operação 1 o capacitor está completamente descarregado, e o indutor carrega totalmente a corrente em posição oposta. E finalmente, o modo 4 que ocorre exatamente o mesmo evento que o modo 2, no entanto, na chave 1.
+
+\subsection{Limitações do circuito}
+
+\subsubsection{Dependência da carga}
+Durante a transferência de potência a carga é refletida para o primário, e aparece em paralelo com o tanque LC, e com isso a frequÇencia de oscilação é dependente da carga em uso, gerando uma perda maior.
+\subsubsection{Resposta do Gate}
+Quando a frequência de oscilação é baixa, este fator não é crucial. No entanto, com o aumento de frequência, já que o gate é um capacitor, a constante RC deve ser levada em conta.
+
+\subsubsection{Alta voltagem no Gate}
+Outro problema é a alta voltagem presente no gate. Este problema é facilmente mitigado adicionando um zener com uma tensão ligeiramente abaixo da tensão de breakdown do gate, embora cause uma perda maior na resistência do gate.
+
+\subsection{Resistência do transistor}
+Quando o transistor está descarregando o capacitor, toda a corrente gerada no circuito passa através dele, havendo a necessidade de optar por um MOSFET que possua a menor resistência possível quando ele estiver ativo, afim de manter a menor perda possível no transistor, e garantir que ele não esquente demais.
