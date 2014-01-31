@@ -1,39 +1,44 @@
+\chapter{Cap√≠tulo 1}\label{chap-1}
+\chapterprecis{Isto √© uma sinopse de cap√≠tulo. A ABNT n√£o traz nenhuma
+normatiza√ß√£o a respeito desse tipo de resumo, que √© mais comum em romances 
+e livros t√©cnicos.}\index{sinopse de cap√≠tulo}
+
 \section{Oscilador LC MOS cruzado acoplado}
-Neste tipo de oscilador, os transistores est„o em classe A, fornecendo energia ao tanque LC, que consome devido a sua n„o idealidade. Neste caso, a energia que o transistor injeta no tanque, deve ser maior ou igual que a resistÍncia de perda total do circuito. O fator de qualidade deste circuito È:
+Neste tipo de oscilador, os transistores est√£o em classe A, fornecendo energia ao tanque LC, que consome devido a sua n√£o idealidade. Neste caso, a energia que o transistor injeta no tanque, deve ser maior ou igual que a resist√™ncia de perda total do circuito. O fator de qualidade deste circuito √©:
 \begin{equation}
 Q = \frac{2\pi*f*L}{R_p}
 \end{equation}
-E o g_m È:
+E o $g_m$ √©:
 \begin{equation}
 g_m = \frac{i_D}{V_{GS} - V_t}
 \end{equation}
-Para que ocorra uma oscilaÁ„o:
+Para que ocorra uma oscila√ß√£o:
 \begin{equation}
 \frac{1}{g_m} \geq \frac{2\pi*f*L}{Q}
 \end{equation}
-… importante notar que, mesmo que o circuito seja inst·vel e os transistores entrem em corte e saturaÁ„o, a tesn„o na saÌda continuar· prÛxima de uma senoide perfeita quanto maior for o fator de qualidade do tanque.
-Uma das grandes desvantagens desse circuito deve-se ao fato de que s„o poucos os MOSFETs que sustentam uma tens„o de gate maior que 20V, limitando assim a potÍncia do circuito.
+√â importante notar que, mesmo que o circuito seja inst√°vel e os transistores entrem em corte e satura√ß√£o, a tesn√£o na sa√≠da continuar√° pr√≥xima de uma senoide perfeita quanto maior for o fator de qualidade do tanque.
+Uma das grandes desvantagens desse circuito deve-se ao fato de que s√£o poucos os MOSFETs que sustentam uma tens√£o de gate maior que 20V, limitando assim a pot√™ncia do circuito.
 
 
 \section{Oscilador Royer}
-Em 1954, George Royer patenteou o oscilador Royer, um circuito auto ressonante, simples e com pouco uso de componentes. Como a maioria dos osciladores, ele utiliza um tanque LC para a oscilaÁ„o. A grande vantagem deste circuito deve-se ao fato do terceiro enrolamento estar conectado ‡ base dos transistores. Isto garante que um transistor estar· cortado enquanto o outro estiver ativo, diminuindo bastante o consumo energÈtico do circuito.
+Em 1954, George Royer patenteou o oscilador Royer, um circuito auto ressonante, simples e com pouco uso de componentes. Como a maioria dos osciladores, ele utiliza um tanque LC para a oscila√ß√£o. A grande vantagem deste circuito deve-se ao fato do terceiro enrolamento estar conectado √† base dos transistores. Isto garante que um transistor estar√° cortado enquanto o outro estiver ativo, diminuindo bastante o consumo energ√©tico do circuito.
 
 
 \section{Oscilador Mazzilli}
-O oscilador Mazzilli È uma derivaÁ„o do oscilador Royer com o LC MOS. A grande diferenÁa neste circuito est· no circuito presente no gate, para assegurar o baixo consumo energÈtico e o chaveamento em ZVS sem ter que utilizar um terceiro enrolamento no indutor. Mazzilli usa uma combinaÁ„o, retirando energia de Vin (como no Royer) e no entanto ligando os gates por um diodo ao dreno oposto. Com isso, suprimos o problema de tens„o que existia no LC MOS e continuamos a utilizasr MOSFET ao invÈs de BJT, podendo assim, garantir alta frequÍncia na oscilaÁ„o.
+O oscilador Mazzilli √© uma deriva√ß√£o do oscilador Royer com o LC MOS. A grande diferen√ßa neste circuito est√° no circuito presente no gate, para assegurar o baixo consumo energ√©tico e o chaveamento em ZVS sem ter que utilizar um terceiro enrolamento no indutor. Mazzilli usa uma combina√ß√£o, retirando energia de Vin (como no Royer) e no entanto ligando os gates por um diodo ao dreno oposto. Com isso, suprimos o problema de tens√£o que existia no LC MOS e continuamos a utilizasr MOSFET ao inv√©s de BJT, podendo assim, garantir alta frequ√™ncia na oscila√ß√£o.
 
-\subsection{Modos de OperaÁ„o}
-Esse convers„o possui quatro modos de operaÁ„o. O primeiro dele consiste no dreno das duas chaves aterrados. Como eles est„o ligados cruzado, isto garante que a chave 1 est· cortada e a 2 ativa. Durante esta operaÁ„o o capacitor È completamente descarregado. Depois disso a chave 1 È cortada e È a vez da chave 2 est· ativa. Assim h· a geraÁ„o de uma corrente que ir· percorrer o tanque LC e ir· descarregar na chave ativa. Quando a voltagem no dreno 1 retorna para zero, ocorre o chaveamento das duas chaves. Assim como no modo de operaÁ„o 1 o capacitor est· completamente descarregado, e o indutor carrega totalmente a corrente em posiÁ„o oposta. E finalmente, o modo 4 que ocorre exatamente o mesmo evento que o modo 2, no entanto, na chave 1.
+\subsection{Modos de Opera√ß√£o}
+Esse convers√£o possui quatro modos de opera√ß√£o. O primeiro dele consiste no dreno das duas chaves aterrados. Como eles est√£o ligados cruzado, isto garante que a chave 1 est√° cortada e a 2 ativa. Durante esta opera√ß√£o o capacitor √© completamente descarregado. Depois disso a chave 1 √© cortada e √© a vez da chave 2 est√° ativa. Assim h√° a gera√ß√£o de uma corrente que ir√° percorrer o tanque LC e ir√° descarregar na chave ativa. Quando a voltagem no dreno 1 retorna para zero, ocorre o chaveamento das duas chaves. Assim como no modo de opera√ß√£o 1 o capacitor est√° completamente descarregado, e o indutor carrega totalmente a corrente em posi√ß√£o oposta. E finalmente, o modo 4 que ocorre exatamente o mesmo evento que o modo 2, no entanto, na chave 1.
 
-\subsection{LimitaÁıes do circuito}
+\subsection{Limita√ß√µes do circuito}
 
-\subsubsection{DependÍncia da carga}
-Durante a transferÍncia de potÍncia a carga È refletida para o prim·rio, e aparece em paralelo com o tanque LC, e com isso a frequ«encia de oscilaÁ„o È dependente da carga em uso, gerando uma perda maior.
+\subsubsection{Depend√™ncia da carga}
+Durante a transfer√™ncia de pot√™ncia a carga √© refletida para o prim√°rio, e aparece em paralelo com o tanque LC, e com isso a frequ√áencia de oscila√ß√£o √© dependente da carga em uso, gerando uma perda maior.
 \subsubsection{Resposta do Gate}
-Quando a frequÍncia de oscilaÁ„o È baixa, este fator n„o È crucial. No entanto, com o aumento de frequÍncia, j· que o gate È um capacitor, a constante RC deve ser levada em conta.
+Quando a frequ√™ncia de oscila√ß√£o √© baixa, este fator n√£o √© crucial. No entanto, com o aumento de frequ√™ncia, j√° que o gate √© um capacitor, a constante RC deve ser levada em conta.
 
 \subsubsection{Alta voltagem no Gate}
-Outro problema È a alta voltagem presente no gate. Este problema È facilmente mitigado adicionando um zener com uma tens„o ligeiramente abaixo da tens„o de breakdown do gate, embora cause uma perda maior na resistÍncia do gate.
+Outro problema √© a alta voltagem presente no gate. Este problema √© facilmente mitigado adicionando um zener com uma tens√£o ligeiramente abaixo da tens√£o de breakdown do gate, embora cause uma perda maior na resist√™ncia do gate.
 
-\subsection{ResistÍncia do transistor}
-Quando o transistor est· descarregando o capacitor, toda a corrente gerada no circuito passa atravÈs dele, havendo a necessidade de optar por um MOSFET que possua a menor resistÍncia possÌvel quando ele estiver ativo, afim de manter a menor perda possÌvel no transistor, e garantir que ele n„o esquente demais.
+\subsection{Resist√™ncia do transistor}
+Quando o transistor est√° descarregando o capacitor, toda a corrente gerada no circuito passa atrav√©s dele, havendo a necessidade de optar por um MOSFET que possua a menor resist√™ncia poss√≠vel quando ele estiver ativo, afim de manter a menor perda poss√≠vel no transistor, e garantir que ele n√£o esquente demais.
