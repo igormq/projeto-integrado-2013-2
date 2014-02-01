@@ -1,12 +1,9 @@
 \chapter{Capítulo 1}\label{chap-1}
-\chapterprecis{Isto é uma sinopse de capítulo. A ABNT não traz nenhuma
-normatização a respeito desse tipo de resumo, que é mais comum em romances 
-e livros técnicos.}\index{sinopse de capítulo}
-
+\chapterprecis{Em aplicações RF é mais comum empregar redes de realimentações utilizando somente tanques LC, devido ao alto fator de qualidade, além disso podendo assumir potências extremamentes altas (ao contrário, por exemplo, de redes com amplificadores operacionais). Alguns desses osciladores são: oscilador LC MOS, royer e mazzilli.}\index{sinopse de capítulo}
 \section{Oscilador LC MOS cruzado acoplado}
 Neste tipo de oscilador, os transistores estão em classe A, fornecendo energia ao tanque LC, que consome devido a sua não idealidade. Neste caso, a energia que o transistor injeta no tanque, deve ser maior ou igual que a resistência de perda total do circuito. O fator de qualidade deste circuito é:
 \begin{equation}
-Q = \frac{2\pi*f*L}{R_p}
+Q = \frac{2\pi f L}{R_p}
 \end{equation}
 E o $g_m$ é:
 \begin{equation}
@@ -14,7 +11,7 @@ g_m = \frac{i_D}{V_{GS} - V_t}
 \end{equation}
 Para que ocorra uma oscilação:
 \begin{equation}
-\frac{1}{g_m} \geq \frac{2\pi*f*L}{Q}
+\frac{1}{g_m} \geq \frac{2\pi f L}{Q}
 \end{equation}
 É importante notar que, mesmo que o circuito seja instável e os transistores entrem em corte e saturação, a tesnão na saída continuará próxima de uma senoide perfeita quanto maior for o fator de qualidade do tanque.
 Uma das grandes desvantagens desse circuito deve-se ao fato de que são poucos os MOSFETs que sustentam uma tensão de gate maior que 20V, limitando assim a potência do circuito.
