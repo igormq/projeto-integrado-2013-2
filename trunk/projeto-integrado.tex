@@ -62,8 +62,8 @@
 % Pacotes de citações
 % ---
 \usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
-\usepackage[alf]{abntex2cite}	% Citações padrão ABNT
-
+\usepackage[num]{abntex2cite}	% Citações padrão ABNT
+\citebrackets[]
 % --- 
 % CONFIGURAÇÕES DE PACOTES
 % --- 
@@ -88,23 +88,24 @@
 % ---
 % Informações de dados para CAPA e FOLHA DE ROSTO
 % ---
-\titulo{Modelo Canônico de\\ Trabalho Acadêmico com \abnTeX}
-\autor{Equipe \abnTeX}
-\local{Brasil}
-\data{2014, v-1.9.2}
-\orientador{Lauro César Araujo}
-\coorientador{Equipe \abnTeX}
+\titulo{Chuveiro com aquecimento indutivo}
+\autor{Igor Macedo Quintanilha\\ Roberto de Moura Estevão Filho}
+\local{Rio de Janeiro}
+\data{2013}
+\orientador{Carlos José Ribas D'Avila}
+\coorientador{Joarez Bastos Monteiro}
 \instituicao{%
-  Universidade do Brasil -- UBr
+  Universidade Federal do Rio de Janeiro
   \par
-  Faculdade de Arquitetura da Informação
+  Escola Politécnica
   \par
-  Programa de Pós-Graduação}
-\tipotrabalho{Tese (Doutorado)}
+  Departamento de Engenharia Eletrônica
+  \par
+  Projeto Integrado}
+\tipotrabalho{Trabalho}
 % O preambulo deve conter o tipo do trabalho, o objetivo, 
 % o nome da instituição e a área de concentração 
-\preambulo{Modelo canônico de trabalho monográfico acadêmico em conformidade com
-as normas ABNT apresentado à comunidade de usuários \LaTeX.}
+\preambulo{Trabalho realizado para a disciplina Projeto Integrado do curso de Engenharia Eletrônica da Universidade Federal do Rio de Janeiro}
 % ---
 
 
@@ -153,6 +154,7 @@ as normas ABNT apresentado à comunidade de usuários \LaTeX.}
 % Início do documento
 % ----
 \begin{document}
+
 
 % Retira espaço extra obsoleto entre as frases.
 \frenchspacing 
@@ -282,13 +284,9 @@ as normas ABNT apresentado à comunidade de usuários \LaTeX.}
     \vspace*{\fill}
    \end{center}
         
-   Trabalho aprovado. \imprimirlocal, 24 de novembro de 2012:
 
    \assinatura{\textbf{\imprimirorientador} \\ Orientador} 
-   \assinatura{\textbf{Professor} \\ Convidado 1}
-   \assinatura{\textbf{Professor} \\ Convidado 2}
-   %\assinatura{\textbf{Professor} \\ Convidado 3}
-   %\assinatura{\textbf{Professor} \\ Convidado 4}
+   \assinatura{Joarez Bastos Monteiro \\ Coorientador}
       
    \begin{center}
     \vspace*{0.5cm}
@@ -413,10 +411,7 @@ as normas ABNT apresentado à comunidade de usuários \LaTeX.}
 % inserir lista de símbolos
 % ---
 \begin{simbolos}
-  \item[$ \Gamma $] Letra grega Gama
-  \item[$ \Lambda $] Lambda
-  \item[$ \zeta $] Letra grega minúscula zeta
-  \item[$ \in $] Pertence
+  \item[$ g_m $] Transcondutância do amplificador MOS
 \end{simbolos}
 % ---
 
@@ -454,20 +449,9 @@ as normas ABNT apresentado à comunidade de usuários \LaTeX.}
 % ---
 % Capitulo de revisão de literatura
 % ---
-%\include{ch2}
-% ---
-
-% ---
-% Capitulo de revisão de literatura
-% ---
 \include{experimento}
 % ---
 
-% ---
-% primeiro capitulo de Resultados
-% ---
-%\include{resultados}
-% ---
 
 
 % ----------------------------------------------------------

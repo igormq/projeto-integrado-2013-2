@@ -1,7 +1,7 @@
 \chapter{Experimento}
-A primeira abordagem para realizar a montagem experimental foi construir uma placa de circuito impresso com o circuito do Mazzilli. Porém, o circuito planejado drenaria uma corente de 30A e oscilaria numa frequência em torno de 400kHz. Utilizando [] para calcular qual deveria ser o tamanho da trilha, chegamos a valores que não seriam práticos. Portanto a ideia era fazer a montagem em outro material e fazer as ligações por cabos que se usam em instalação elétrica, garantindo assim o funcionamento adequado. Para isto, foi feita a montagem experimental em cima de uma placa de madeira, que é um péssimo condutor, funcionando como um ótimo isolante. 
+A primeira abordagem para realizar a montagem experimental foi construir uma placa de circuito impresso com o circuito do Mazzilli. Porém, o circuito planejado drenaria uma corente de 30A e oscilaria numa frequência em torno de 400kHz. Utilizando \cite{pcbtrace} para calcular qual deveria ser a espessura da trilha, chegamos a valores que não seriam práticos ($42$mm de espessura). Portanto a ideia era fazer a montagem em outro material e fazer as ligações por cabos que se usam em instalação elétrica, garantindo assim o funcionamento adequado. Para isto, foi feita a montagem experimental em cima de uma placa de madeira, que é um péssimo condutor, funcionando como um ótimo isolante. 
 \section{Transistores}
-Para podermos atender os requisitos citados em [] foi necessário a escolha de um IRFP250N, onde podemos conferir suas especificações [] na \autoref{tabela-car-irfp}.
+Para podermos atender os requisitos citados no \autoref{osciladores-lc} foi necessário a escolha do IRFP250N, onde podemos conferir suas especificações na \autoref{tabela-car-irfp}.
 
 
 \begin{table}[htb]
@@ -27,7 +27,7 @@ Para podermos atender os requisitos citados em [] foi necessário a escolha de u
 
 
 \section{Capacitores}
-Outro problema prático é que o capacitor deve ser apolar, pois o sinal excursionado nele ora é positivo, ora é negativo. Além disto, a corrente AC que passa está na ordem de dezenas de amperes, havendo a necessidade de realizar associações em paralelo para dividir a corrente entre os componentes até um valor aceitável. A \autoref{tabela-cap-comp} mostra os materiais que são comumente fabricados o capacitor. Podemos observar que o melhor material para agir em conjunto com um circuito que irá oscilar em alta frequência, com uma alta tensão e maior fator de qualidade possível, é o polipropileno. No projeto, foi utilizado 3 capacitores, modelo B32653 [].
+Outro problema prático é que o capacitor deve ser apolar, pois o sinal excursionado nele ora é positivo, ora é negativo. Além disto, a corrente AC que passa está na ordem de dezenas de amperes, havendo a necessidade de realizar associações em paralelo para dividir a corrente entre os componentes até um valor aceitável. A \autoref{tabela-cap-comp} mostra os materiais que são comumente fabricados o capacitor. Podemos observar que o melhor material para agir em conjunto com um circuito que irá oscilar em alta frequência, com uma alta tensão e maior fator de qualidade possível, é o polipropileno. No projeto, foi utilizado 3 capacitores, modelo B32653, de  $.22\mu F$ cada.
 
 
 \begin{table}[htb]
@@ -58,7 +58,7 @@ Outro problema prático é que o capacitor deve ser apolar, pois o sinal excursi
 \section{Bobina de Trabalho}
 
 \section{Choke}
-Utilizando a fórmula aproximada de Wheeler [], adaptado em [], para ficar em metros e Henrys, temos que a fórmula explicita para o cálculo da indutância é:
+Utilizando a fórmula aproximada de Wheeler \cite{wheeler1928simple}, adaptado em \cite{de2003calculo}, para ficar em metros e Henrys, temos que a fórmula explicita para o cálculo da indutância é:
 \begin{equation}
 L = \mu_0 \frac{\pi r^2 n^2}{h + 0.9r}
 \end{equation}
@@ -104,5 +104,5 @@ Utilizamos solda de estanho e fios de $1\mbox{mm}^2$ e $1.5\mbox{mm}^2$ para a p
 \begin{center}
 \includegraphics[scale=0.1]{images/montagem.jpg}
 \end{center}
-\legend{Montagem experimental do circuito na base de madeira.}
+\legend{Montagem experimental do circuito na base de madeira. Fios de cor amarela são de $1\mbox{mm}^2$ enquanto os verdes são de $1.5\mbox{mm}^2$}
 \end{figure}
