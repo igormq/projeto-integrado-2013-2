@@ -1,7 +1,31 @@
 \chapter{Aquecimento por indução}
 O aquecimento por indução\cite{wiki-induction} é o processo de aquecer um material por meio de indução eletromagnética. As principais causas do aquecimento são as correntes de Foucault e o efeito de histerese magnética. De forma geral, o aquecedor consiste em uma bobina, que é excitada por uma corrente alternada, gerando um campo magnético variável que atua sobre o objeto.
 
-Materiais com permeabilidade magnética relativa baixa, por exemplo, materiais paramagnéticos e diamagnéticos, como o alumínio ou o cobre, são principalmente afetados pelas correntes de Foucault, que são correntes induzidas devido ao campo magnético variável, que, por sua vez, gera uma diferença de potencial no material. Estas correntes, devido à resistência elétrica do material, dissipam calor por efeito Joule, aquecendo do material. Quanto maiores a condutividade do condutor e a intensidade e frequência do campo eletromagnético, maior serão as correntes no material.
+Materiais com permeabilidade magnética relativa baixa, por exemplo, materiais paramagnéticos e diamagnéticos, como o alumínio ou o cobre (ver \autoref{tabela-permeabilidade}), são principalmente afetados pelas correntes de Foucault, que são correntes induzidas devido ao campo magnético variável, que, por sua vez, gera uma diferença de potencial no material. Estas correntes, devido à resistência elétrica do material, dissipam calor por efeito Joule, aquecendo do material. Quanto maiores a condutividade do condutor e a intensidade e frequência do campo eletromagnético, maior serão as correntes no material.
+
+\begin{table}[h]
+\IBGEtab{%
+  \caption{Tabela de permeabilidade magnética}%
+  \label{tabela-permeabilidade}
+}{%
+  \begin{tabular}{ccc}
+  \toprule
+  Material & Permeabilidade Relativa & Classificação Magnética \\
+  \midrule
+  Água & $0.999991$ &  Diamagnética\\
+  Cobre & $0,999995$ & Diamagnética \\
+  Alumínio & $1.000021$ & Paramagnética \\
+  Ferro & $7000$ & Ferromagnética\\
+  \bottomrule
+\end{tabular}%
+}{%
+%  \fonte{International Rectifier}%
+%  \nota{Os valores máximos são para uma temperatura de $25^oC$.}%
+%  \nota[Obs.:]{* Existem os capacitores eletrolíticos bipolares porém não possuem capacitâncias tão altas.}%
+%  \nota[Obs.:]{** Essa resistência só é válida quando o transistor estiver no modo ativo.}%
+  }
+\end{table}
+
 \section{Efeito skin}
 Em casos de frequências muito elevadas do campo eletromagnético, não há penetração completa do campo no interior do material. Este é chamado o efeito skin, já que as correntes tendem a se concentrar nas bordas do material. Neste caso, a distribuição da corrente não pode mais ser considerada uniforme, e a redução da superfície efetiva do material faz com que a resistência aumente. Sabendo que a potência $P$ pode ser calculada por $P = RI^2$, onde $R$ é a resistência do material e $I$ é a corrente, vemos que a potência dissipada irá aumentar, já que, além do aumento da resistência, a corrente também irá aumentar, apesar da distribuição não uniforme do campo.
 \section{Histerese}
